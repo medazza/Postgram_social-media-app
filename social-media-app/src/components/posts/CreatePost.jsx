@@ -8,7 +8,10 @@ function CreatePost(props) {
   const { refresh } = props;
   const [show, setShow] = useState(false);
   const [validated, setValidated] = useState(false);
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({
+    author: "",
+    body: "",
+  });
 
   const { setToaster } = useContext(Context);
 
@@ -72,7 +75,11 @@ function CreatePost(props) {
           <Modal.Title>Create New Post</Modal.Title>
         </Modal.Header>
         <Modal.Body className="border-0">
-          <Form noValidate validated={validated} onSubmit={handleSubmit} data-testid="create-post-form">
+          <Form 
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+            data-testid="create-post-form">
             <Form.Group className="mb-0">
               <Form.Control
                 name="body"
@@ -89,7 +96,7 @@ function CreatePost(props) {
           <Button
             variant="primary"
             onClick={handleSubmit}
-            disabled={form.body === undefined}
+            disabled={!form.body}
             data-testid="create-post-submit"
           >
             Create

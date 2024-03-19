@@ -70,7 +70,7 @@ function Post(props) {
             {user.name === post.author.name && (
               <div>
                 <Dropdown>
-                  <Dropdown.Toggle as={MoreToggleIcon}></Dropdown.Toggle>
+                  <Dropdown.Toggle as={MoreToggleIcon} />
                   <Dropdown.Menu>
                     <UpdatePost post={post}
                     refresh={refresh} />

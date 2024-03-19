@@ -3,6 +3,7 @@
 exports[`Profile Card snapshot 1`] = `
 <div
   className="border-0 card"
+  data-testid="profile-card"
 >
   <div
     className="card-body"

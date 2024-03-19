@@ -11,7 +11,7 @@ function ProfileCard(props) {
   };
 
   return (
-    <Card className="border-0">
+    <Card className="border-0" data-testid="profile-card">
       
         <Card.Body>
           <div className="d-flex flex-column align-items-center text-center">
